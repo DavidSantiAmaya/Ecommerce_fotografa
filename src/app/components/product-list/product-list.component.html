@@ -1,0 +1,29 @@
+<div class="container mt-4">
+
+    <h2>Productos Disponibles</h2>
+  
+    <div class="row">
+  
+      <div *ngFor="let product of products" class="col-md-4 mb-3">
+  
+        <div class="card">
+  
+          <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
+  
+          <div class="card-body">
+  
+            <h5 class="card-title">{{ product.name }}</h5>
+  
+            <p class="card-text">{{ product.price | currency }}</p>
+  
+            <button class="btn btn-primary" (click)="addToCart(product)">Añadir al Carrito</button>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>
