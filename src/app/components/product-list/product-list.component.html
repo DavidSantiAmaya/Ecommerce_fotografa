@@ -11,8 +11,13 @@
 
   <div class="row">
     <!-- Iteramos sobre filteredProducts si tiene datos, de lo contrario sobre products -->
-    <div
-      *ngFor="
+    <!-- Si el usuario no ha buscado nada, mostramos todos los productos -->
+    <!-- Si el usuario ya buscó y hay resultados, mostramos los productos filtrados -->
+    <!-- Si el usuario ya buscó y no hay resultados, mostramos un mensaje -->
+    <!-- Usamos el operador ternario para decidir qué lista mostrar
+    Si hay productos filtrados, mostramos esos; de lo contrario, mostramos todos -->
+    <div 
+      *ngFor=" 
         let product of filteredProducts.length > 0 ? filteredProducts : products
       "
       class="col-md-4 mb-3"
@@ -35,7 +40,8 @@
       *ngIf="searchTerm && filteredProducts.length === 0"
       class="col-12 text-center mt-4"
     >
-      <p>No se encontraron productos.</p>
+      <h4>No se encontraron productos para "{{ searchTerm }}"</h4>
+      <p>Intenta con otro término de búsqueda.</p>
     </div>
   </div>
 </div>

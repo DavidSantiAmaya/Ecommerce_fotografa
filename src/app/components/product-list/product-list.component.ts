@@ -25,7 +25,7 @@ interface Product {
 export class ProductListComponent implements OnInit{
 
   products: Product[] = []; // Crear la variable para los productos
-  filteredProducts: Product[] = []; // Crear el filtro para la busqueda los productos
+  filteredProducts: Product[] = []; // Crear un array del filtro para la busqueda los productos
   searchTerm: string = ''; // Crear el buscador
 
   constructor(private productService: ProductService) {}
@@ -46,7 +46,7 @@ export class ProductListComponent implements OnInit{
       this.filteredProducts = []; // Oculta lista si el campo está vacío
       return;
     }
-
+    
     this.filteredProducts = this.products.filter((product) =>
       product.name.toLowerCase().includes(term)
     );
