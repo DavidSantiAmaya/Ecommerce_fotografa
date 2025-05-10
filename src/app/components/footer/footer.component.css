@@ -1,9 +1,23 @@
 footer {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+
+
