@@ -1,3 +1,20 @@
+<!-- 
+  Usamos el evento input para detectar cuando el usuario escribe en el campo de búsqueda
+  y llamamos a la función searchProducts() para filtrar los productos
+  La función searchProducts() se encarga de filtrar los productos según el término de búsqueda
+  La función searchProducts() se ejecuta cada vez que el usuario escribe en el campo de búsqueda
+   -->
+  <!-- 
+  Usamos el two-way data binding para enlazar el valor del campo de búsqueda
+  con la propiedad searchTerm del componente
+  Esto permite que el valor del campo de búsqueda se actualice automáticamente
+  en el componente y viceversa
+  El two-way data binding se logra usando la directiva ngModel
+  ngModel es una directiva de Angular que permite enlazar el valor de un input
+  con una propiedad del componente
+  Para usar ngModel, debemos importar FormsModule en el módulo de la aplicación
+  y agregarlo a la lista de imports
+   -->
 <input
   type="text"
   placeholder="Buscar producto"
@@ -11,11 +28,24 @@
 
   <div class="row">
     <!-- Iteramos sobre filteredProducts si tiene datos, de lo contrario sobre products -->
-    <!-- Si el usuario no ha buscado nada, mostramos todos los productos -->
-    <!-- Si el usuario ya buscó y hay resultados, mostramos los productos filtrados -->
-    <!-- Si el usuario ya buscó y no hay resultados, mostramos un mensaje -->
-    <!-- Usamos el operador ternario para decidir qué lista mostrar
-    Si hay productos filtrados, mostramos esos; de lo contrario, mostramos todos -->
+    <!-- 
+      Usamos la directiva ngFor para iterar sobre la lista de productos
+      y mostrar cada producto en una tarjeta
+      La directiva ngFor se usa para iterar sobre una lista de elementos
+      y crear un elemento HTML por cada elemento de la lista
+      En este caso, estamos iterando sobre la lista de productos
+      y creando una tarjeta para cada producto
+     -->
+    <!-- 
+      Usamos la directiva ngIf para mostrar un mensaje si no hay productos
+      y la directiva ngFor para iterar sobre la lista de productos
+      y crear una tarjeta para cada producto
+      La directiva ngIf se usa para mostrar u ocultar un elemento HTML
+      según una condición
+      En este caso, estamos mostrando un mensaje si no hay productos
+      y ocultando la lista de productos
+    -->
+    <!-- condicion if-else -->
     <div 
       *ngFor=" 
         let product of filteredProducts.length > 0 ? filteredProducts : products

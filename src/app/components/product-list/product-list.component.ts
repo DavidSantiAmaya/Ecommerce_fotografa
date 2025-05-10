@@ -23,7 +23,6 @@ interface Product {
 })
 
 export class ProductListComponent implements OnInit{
-
   products: Product[] = []; // Crear la variable para los productos
   filteredProducts: Product[] = []; // Crear un array del filtro para la busqueda los productos
   searchTerm: string = ''; // Crear el buscador
@@ -46,7 +45,13 @@ export class ProductListComponent implements OnInit{
       this.filteredProducts = []; // Oculta lista si el campo está vacío
       return;
     }
-    
+    // Filtrar los productos que coinciden con el término de búsqueda
+    // y asignarlos a filteredProducts
+    // Se utiliza el método filter para crear un nuevo array que contenga solo los productos que cumplen con la condición especificada en la función de callback
+    // La función de callback verifica si el nombre del producto (en minúsculas) incluye el término de búsqueda (también en minúsculas)
+    // El método toLowerCase() se utiliza para hacer la comparación sin tener en cuenta las mayúsculas y minúsculas
+    // El método includes() se utiliza para verificar si el término de búsqueda está presente en el nombre del producto
+    // El resultado es un nuevo array que contiene solo los productos que coinciden con el término de búsqueda
     this.filteredProducts = this.products.filter((product) =>
       product.name.toLowerCase().includes(term)
     );
