@@ -11,12 +11,5 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 
 export class AppComponent {
-  title = 'mi-proyecto-angular';
-  changeColor() {
-
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-    document.querySelector('h1')!.style.color = randomColor;
-
-  }
+  
 }

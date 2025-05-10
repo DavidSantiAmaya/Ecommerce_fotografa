@@ -4,13 +4,9 @@ import { BehaviorSubject } from 'rxjs';
 interface Product {
 
   id: number;
-
   name: string;
-
   price: number;
-
   category: string;
-
   imageUrl: string;
 
 }
@@ -18,14 +14,12 @@ interface Product {
  
 
 @Injectable({
-
   providedIn: 'root'
-
 })
 
 export class ProductService {
 
-  private products = new BehaviorSubject<Product[]>([
+  private products = new BehaviorSubject<Product[]>([ // Lista de productos
 
     { id: 1, name: 'Laptop', price: 1000, category: 'Electronics', imageUrl: 'assets/Mirage Logo Concept @ouhcosmo.jpg' },
 
@@ -33,14 +27,11 @@ export class ProductService {
 
     { id: 3, name: 'Headphones', price: 150, category: 'Accessories', imageUrl: 'assets/descarga (9).jpg' },
 
-    // Agrega más productos según sea necesario
-
   ]);
 
  
 
-  getProducts() {
-
+  getProducts() { // Método para obtener los productos y llevarlos a product-list.component.ts
     return this.products.asObservable();
 
   }

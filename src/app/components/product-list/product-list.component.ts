@@ -6,65 +6,40 @@ import { FormsModule } from '@angular/forms'; // importar FormsModule, Forzar la
 interface Product {
 
   id: number;
-
   name: string;
-
   price: number;
-
   category: string;
-
   imageUrl: string;
-
 }
 
  
 
 @Component({
-
   selector: 'app-product-list',
-
   standalone: true, // importante en Angular 18.2.10
-
   imports: [CommonModule, FormsModule], // Importación necesaria
-
   templateUrl: './product-list.component.html',
-
   styleUrls: ['./product-list.component.css']
-
 })
 
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit{
 
-  products: Product[] = [];
-
+  products: Product[] = []; // Crear la variable para los productos
   filteredProducts: Product[] = []; // Crear el filtro para la busqueda los productos
   searchTerm: string = ''; // Crear el buscador
 
   constructor(private productService: ProductService) {}
 
  
-
-  ngOnInit(): void {
-
+  ngOnInit(): void { // Llamar al servicio para obtener los productos y asignarlos a la variable products
     this.productService.getProducts().subscribe((products) => {
-
       this.products = products;
-
     });
 
   }
 
- 
 
-  addToCart(product: Product) {
-
-    // Lógica para agregar al carrito
-
-    console.log(`Producto añadido al carrito: ${product.name}`);
-
-  }
-
-  searchProducts(): void {             // Función para la busqueda
+  searchProducts(): void {  // Función para la busqueda || Convertir el término de búsqueda a minúsculas y eliminar espacios en blanco
     const term = this.searchTerm.trim().toLowerCase();
 
     if (term === '') {
