@@ -45,6 +45,16 @@
       En este caso, estamos mostrando un mensaje si no hay productos
       y ocultando la lista de productos
     -->
+
+     <!-- Si el usuario ya buscó y no hay resultados -->
+    <div
+      *ngIf="searchTerm && filteredProducts.length === 0"
+      class="col-12 text-center mt-4 alert alert-warning"
+    >
+      <h4>No se encontraron productos para "{{ searchTerm }}"</h4>
+      <p>Intenta con otro término de búsqueda.</p>
+    </div>
+
     <!-- condicion if-else -->
     <div 
       *ngFor=" 
@@ -63,15 +73,6 @@
           <p class="card-text">$ {{ product.price }}</p>
         </div>
       </div>
-    </div>
-
-    <!-- Si el usuario ya buscó y no hay resultados -->
-    <div
-      *ngIf="searchTerm && filteredProducts.length === 0"
-      class="col-12 text-center mt-4"
-    >
-      <h4>No se encontraron productos para "{{ searchTerm }}"</h4>
-      <p>Intenta con otro término de búsqueda.</p>
     </div>
   </div>
 </div>
