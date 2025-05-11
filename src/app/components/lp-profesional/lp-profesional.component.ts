@@ -3,7 +3,7 @@ import { ProductListComponent } from '../product-list/product-list.component';
 
 @Component({
   selector: 'app-lp-profesional',
-  imports: [ ProductListComponent ,],
+  imports: [ ProductListComponent],
   templateUrl: './lp-profesional.component.html',
   styleUrl: './lp-profesional.component.css'
 })
