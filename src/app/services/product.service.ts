@@ -47,8 +47,8 @@ export class ProfesionalService {
 
 }
 
-export class ConvencionalService {
 
+<<<<<<< Updated upstream
   private products = new BehaviorSubject<Product[]>([ // Lista de productos
 
     { id: 1, name: 'Canon EOS R5', price: 15000000, category: 'Electronics', imageUrl: 'Pro1.jpeg', descrip: 'Cámara profesional de alta gama con sensor full-frame y grabación de'},
@@ -67,4 +67,6 @@ export class ConvencionalService {
   }
 
 }
+=======
+>>>>>>> Stashed changes
 
