@@ -10,6 +10,7 @@ interface Product {
   price: number;
   category: string;
   imageUrl: string;
+  descrip: string;
 }
 
 @Component({ // definición del componente

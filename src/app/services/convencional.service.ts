@@ -9,7 +9,7 @@ interface Product {
   price: number;
   category: string;
   imageUrl: string;
-
+  descrip: string;
 }
 
 
@@ -22,11 +22,11 @@ export class ConvencionalService {
 
   private products = new BehaviorSubject<Product[]>([ // Lista de productos
 
-    { id: 1, name: 'Cámara Convencional 1', price: 2000, category: 'Electronics', imageUrl: 'assets/Mirage Logo Concept @ouhcosmo.jpg' },
+    { id: 1, name: 'Cámara Convencional 1', price: 2000, category: 'Electronics', imageUrl: 'assets/Mirage Logo Concept @ouhcosmo.jpg', descrip: '' },
 
-    { id: 2, name: 'Cámara Convencional 2', price: 850, category: 'Electronics', imageUrl: 'descarga (9).jpg' },
+    { id: 2, name: 'Cámara Convencional 2', price: 850, category: 'Electronics', imageUrl: 'descarga (9).jpg', descrip: '' },
 
-    { id: 3, name: 'Cámara Convencional 3', price: 300, category: 'Electronics', imageUrl: 'assets/descarga (9).jpg' },
+    { id: 3, name: 'Cámara Convencional 3', price: 300, category: 'Electronics', imageUrl: 'assets/descarga (9).jpg', descrip: '' },
 
   ]);
 

@@ -34,7 +34,7 @@ export class ProfesionalService {
 
     { id: 2, name: 'Nikon Z9', price: 18000000, category: 'Electronics', imageUrl: 'Pro2.jpeg', descrip: 'Cámara mirrorless tope de gama con sensor full-frame de 45.7 MP, ráfaga de hasta 120 fps, enfoque automático de alto nivel y grabación en 8K. Diseñada para profesionales en fotografía deportiva, naturaleza y video.'},
 
-    { id: 3, name: 'Sony Alpha 1', price: 27000000, category: 'Electronics', imageUrl: 'Pro3.jpeg', descrip: 'Cámara mirrorless profesional con sensor full-frame de 50.1 MP, ráfaga de 30 fps, enfoque ultra rápido y grabación en 8K. Combina alta resolución, velocidad y video de calidad cinematográfica en un solo cuerpo.' },
+    { id: 3, name: 'Sony Alpha 1', price: 27000000, category: 'Electronics', imageUrl: 'Pro3.jpeg', descrip: 'Cámara mirrorless profesional con sensor full-frame de 50.1 MP, ráfaga de 30 fps, enfoque ultra rápido y grabación en 8K. Combina alta resolución, velocidad y video de calidad cinematográfica en un solo cuerpo.', },
 
     { id: 4, name: 'Fujifilm GFX100 II', price: 33000000, category: 'Electronics', imageUrl: 'Pro4.jpeg', descrip: 'Cámara de formato medio con sensor de 102 MP, ideal para fotografía de estudio, moda y paisajes. Ofrece una calidad de imagen excepcional, amplio rango dinámico y grabación de video en 8K, combinando resolución extrema con funciones avanzadas.' },
 
