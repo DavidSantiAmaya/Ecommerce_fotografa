@@ -48,25 +48,4 @@ export class ProfesionalService {
 }
 
 
-<<<<<<< Updated upstream
-  private products = new BehaviorSubject<Product[]>([ // Lista de productos
-
-    { id: 1, name: 'Canon EOS R5', price: 15000000, category: 'Electronics', imageUrl: 'Pro1.jpeg', descrip: 'Cámara profesional de alta gama con sensor full-frame y grabación de'},
-
-    { id: 2, name: 'Nikon Z9', price: 18000000, category: 'Electronics', imageUrl: 'Pro2.jpeg', descrip: 'Cámara mirrorless tope de gama con sensor full-frame de 45.7 MP, ráfaga de hasta 120 fps, enfoque automático de alto nivel y grabación en 8K. Diseñada para profesionales en fotografía deportiva, naturaleza y video.'},
-
-    { id: 3, name: 'Sony Alpha 1', price: 27000000, category: 'Electronics', imageUrl: 'Pro3.jpeg', descrip: 'Cámara mirrorless profesional con sensor full-frame de 50.1 MP, ráfaga de 30 fps, enfoque ultra rápido y grabación en 8K. Combina alta resolución, velocidad y video de calidad cinematográfica en un solo cuerpo.'},
-
-  ]);
-
- 
-
-  getProducts() { // Método para obtener los productos y llevarlos a product-list.component.ts
-    return this.products.asObservable();
-
-  }
-
-}
-=======
->>>>>>> Stashed changes
 
