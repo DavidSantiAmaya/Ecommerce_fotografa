@@ -26,7 +26,9 @@ export class ConvencionalListComponent implements OnInit{
   filteredProducts: Product[] = []; // Crear un array del filtro para la busqueda los productos
   searchTerm: string = ''; // Crear el buscador
 
-  constructor(private productService: ConvencionalService) {}
+  constructor(private productService: ConvencionalService) {} //constructor
+  //inyectar el servicio de productos
+  
 
   ngOnInit(): void { // Llamar al servicio para obtener los productos y asignarlos a la variable products
     this.productService.getProducts().subscribe((products) => {
